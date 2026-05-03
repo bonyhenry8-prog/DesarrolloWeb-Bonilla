@@ -1,0 +1,21 @@
+1. ¿Cuál es el funcionamiento de los callbacks?
+Un callback es simplemente una función que se pasa a otra función como argumento para ser ejecutada más tarde.
+
+Funcionamiento: Imagina que haces una petición a una base de datos. Como no sabes cuánto tardará, le dejas una "nota" (el callback) que dice: "Cuando termines de traer los datos, ejecuta esto".
+
+Visión Crítica: Fueron la base de JS, pero tienen un gran problema: el "Callback Hell". Cuando encadenas muchos procesos (una función dentro de otra, dentro de otra), el código se vuelve imposible de leer y mantener, muy parecido a cuando un flujo de automatización se vuelve demasiado enredado sin una estructura clara.
+
+2. ¿Cómo mejora el uso de promesas?
+Las promesas llegaron para poner orden al caos de los callbacks.
+
+Mejora: En lugar de pasar una función, el sistema te devuelve un "objeto" que representa un valor que estará disponible ahora, en el futuro o nunca.
+
+Visión Crítica: Permiten el encadenamiento (.then), lo que hace que el código se lea de arriba hacia abajo. Además, centralizan el manejo de errores con .catch, evitando que el programa colapse silenciosamente si una API falla.
+
+3. ¿Cómo se revolucionó el manejo asincrónico con async y await?
+Esta es la forma más moderna y es, básicamente, "azúcar sintáctico" sobre las promesas.
+
+Revolución: Permite escribir código asincrónico que parece sincrónico.
+
+Visión Crítica: Eliminó la necesidad de tantos .then() y .catch(). Con async/await, el código es mucho más limpio y fácil de depurar. Para alguien que trabaja con Docker e infraestructura, es como pasar de configurar todo por comandos manuales a usar un archivo docker-compose; es mucho más legible y profesional
+
